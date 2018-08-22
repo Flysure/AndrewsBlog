@@ -4,18 +4,19 @@
     <title>AndrewsBlog</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.scss">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <section class="hero is-info is-fullheight">
+
       <!-- Hero head: will stick at the top -->
-      <div class="hero-head">
+
         <header class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <%= link_to "Flysure", root_path, class: "navbar-item" %>
+              <%= link_to "Andrew Fleischer", root_path, class: "navbar-item" %>
 
               <span class="navbar-burger burger" data-target="navbarMenuHeroC">
                 <span></span>
@@ -27,37 +28,33 @@
               <div class="navbar-end">
                 <%= link_to "Home", root_path, class: "navbar-item is-active" %>
                 <%= link_to "Projects", projects_path, class: "navbar-item" %>
-                <%= link_to "Documentation", documentation_path, class: "navbar-item" %>
                 <span class="navbar-item">
-                  <a class="button is-info is-inverted">
+                  <a class="button is-info is-inverted" href='https://www.linkedin.com/in/andrew-fleischer1997' target="_blank">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
                     <span>LinkedIn</span>
                   </a>
                 </span>
+                <span class="navbar-item">
+                  <a class="button is-info is-inverted" href='https://github.com/Flysure' target="_blank">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>GitHub</span>
+                  </a>
+                </span>
               </div>
             </div>
-          </div>
+
         </header>
-      </div>
+</div>
 
       <%= yield %>
 
-      <!-- Hero footer: will stick at the bottom -->
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li><%= link_to "About Me", aboutme_path %></li>
-              <li><%= link_to "Contact", contact_path%></li>
-              <li><a>Fun</a></li>
 
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </section>
+
+
 
   </body>
 </html>
