@@ -15,9 +15,8 @@
         <header class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <a class="navbar-item">
-                <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-              </a>
+              <%= link_to "Flysure", root_path, class: "navbar-item" %>
+
               <span class="navbar-burger burger" data-target="navbarMenuHeroC">
                 <span></span>
                 <span></span>
@@ -26,15 +25,9 @@
             </div>
             <div id="navbarMenuHeroC" class="navbar-menu">
               <div class="navbar-end">
-                <a class="navbar-item is-active">
-                  Home
-                </a>
-                <a class="navbar-item">
-                  Projects
-                </a>
-                <a class="navbar-item">
-                  Documentation
-                </a>
+                <%= link_to "Home", root_path, class: "navbar-item is-active" %>
+                <%= link_to "Projects", projects_path, class: "navbar-item" %>
+                <%= link_to "Documentation", documentation_path, class: "navbar-item" %>
                 <span class="navbar-item">
                   <a class="button is-info is-inverted">
                     <span class="icon">
@@ -56,8 +49,8 @@
         <nav class="tabs is-boxed is-fullwidth">
           <div class="container">
             <ul>
-              <li class="is-active"><a>About Me</a></li>
-              <li><a>Contact</a></li>
+              <li><%= link_to "About Me", aboutme_path %></li>
+              <li><%= link_to "Contact", contact_path%></li>
               <li><a>Fun</a></li>
 
             </ul>

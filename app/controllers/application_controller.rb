@@ -4,4 +4,10 @@ class ApplicationController < ActionController::Base
   end
   def projects
   end
+  def documentation
+  end
+  def aboutme
+  end
+  def contact
+  end
 end
