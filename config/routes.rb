@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'documentation', to: 'application#documentation'
   get 'aboutme', to: 'application#aboutme'
   get 'contact', to: 'application#contact'
+  get 'apple', to: 'application#apple'
 end

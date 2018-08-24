@@ -8,6 +8,6 @@ class ApplicationController < ActionController::Base
   end
   def aboutme
   end
-  def contact
+  def apple
   end
 end
