@@ -1,0 +1,134 @@
+<div class="container offset">
+  <section class="hero is-danger is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Apple Health app data
+        </h1>
+        <h2 class="subtitle">
+          Running/walking + steps + stairs for about 3 years worth of data
+        </h2>
+      </div>
+    </div>
+  </section>
+  <div class="content box">
+    <h3>The apple health data app on almost every iphone contains a lot of data,
+    some of which you may not know about</h3>
+    <p>Using python and the pandas library, I take dive into nearly 3 years of health
+    contained in the app and see what insights I can take from it</p>
+    <ol>
+      <li>How much do I walk regularly?</li>
+      <li>Do I walk more or less on weekends?</li>
+      <li>Do I walk more or less during the school year?</li>
+      <li>Are there anomalies that I can find?</li>
+    </ol>
+    <p>I ended up with three csv files after exporting the data and then converting the
+    XML file to a CSV through <a href="\">this</a> free tool</p>
+    <ol>
+      <li>RunningWalking.csv</li>
+      <li>Steps.csv</li>
+      <li>Sleep.csv</li>
+    </ol>
+    <p>First, I took a look at RunningWalking.csv. The data starts in May of 2015
+    and continues to the present day.</p>
+    <div class="columns">
+      <div class="column">
+      </div>
+      <div class="column">
+        <canvas id="yearWalk" width="800" height="400"></canvas>
+      </div>
+      <div class="column">
+      </div>
+    </div>
+    <p>On Average, I walked 2.52 miles a day over the whole entire time period</p>
+    <div class="columns">
+      <div class="column">
+        <table border="1" class="table is-narrow is-hoverable is-bordered">   <thead>     <tr style="text-align: right;">       <th>year</th>       <th>month</th>       <th> Miles</th>     </tr>   </thead>   <tbody>     <tr>       <td>2016</td>       <td>1</td>       <td>53.091276</td>     </tr>     <tr>       <td>2016</td>       <td>2</td>       <td>53.365013</td>     </tr>     <tr>       <td>2016</td>       <td>3</td>       <td>62.139636</td>     </tr>     <tr>       <td>2016</td>       <td>4</td>       <td>49.991360</td>     </tr>     <tr>       <td>2016</td>       <td>5</td>       <td>53.492864</td>     </tr>     <tr>       <td>2016</td>       <td>6</td>       <td>54.665672</td>     </tr>     <tr>       <td>2016</td>       <td>7</td>       <td>57.530191</td>     </tr>     <tr>       <td>2016</td>       <td>8</td>       <td>111.828419</td>     </tr>     <tr>       <td>2016</td>       <td>9</td>       <td>150.623946</td>     </tr>     <tr>       <td>2016</td>       <td>10</td>       <td>131.669755</td>     </tr>     <tr>       <td>2016</td>       <td>11</td>       <td>100.519841</td>     </tr>     <tr>       <td>2016</td>       <td>12</td>       <td>64.966597</td>     </tr>   </tbody> </table>
+</div>
+        <div class="column">
+<table border="1" class="table is-narrow is-hoverable is-bordered">   <thead>     <tr style="text-align: right;">       <th>year</th>       <th>month</th>       <th> Miles</th>     </tr>   </thead>   <tbody>     <tr>       <td>2017</td>       <td>1</td>       <td>99.344042</td>     </tr>     <tr>       <td>2017</td>       <td>2</td>       <td>99.739601</td>     </tr>     <tr>       <td>2017</td>       <td>3</td>       <td>107.726948</td>     </tr>     <tr>       <td>2017</td>       <td>4</td>       <td>115.944634</td>     </tr>     <tr>       <td>2017</td>       <td>5</td>       <td>49.206206</td>     </tr>     <tr>       <td>2017</td>       <td>6</td>       <td>38.646855</td>     </tr>     <tr>       <td>2017</td>       <td>7</td>       <td>39.371698</td>     </tr>     <tr>       <td>2017</td>       <td>8</td>       <td>72.224037</td>     </tr>     <tr>       <td>2017</td>       <td>9</td>       <td>105.806909</td>     </tr>     <tr>       <td>2017</td>       <td>10</td>       <td>98.109807</td>     </tr>     <tr>       <td>2017</td>       <td>11</td>       <td>104.650479</td>     </tr>     <tr>       <td>2017</td>       <td>12</td>       <td>45.777159</td>     </tr>   </tbody> </table>
+        </div>
+
+      <div class="column">
+        <canvas id="monthWalk" width="800" height="400"></canvas>
+      </div>
+
+
+  </div>
+
+</div>
+<script>
+var ctx = document.getElementById("yearWalk").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["2015","2016","2017","2018"],
+        datasets: [{
+            label: 'Miles',
+            data: [581.1410155239014, 943.8845704491371, 976.5483752956964, 490.8902315179993],
+            backgroundColor:   'rgba(255, 99, 132, 0.2)',
+            borderColor:   'rgba(255,99,132,1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+      responsive: false,
+
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+var ctx = document.getElementById("monthWalk").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Jan 2016","Feb 2016","Mar 2016","Apr 2016","May 2016","June 2016",'Jul 2016', 'Aug 2016', "Sep 2016",'Oct 2016','Nov 2016', "Dec 2016",
+      "Jan 2017","Feb 2017","Mar 2017","Apr 2017","May 2017","June 2017",'Jul 2017', 'Aug 2017', "Sep 2017",'Oct 2017','Nov 2017', "Dec 2017"],
+        datasets: [{
+            label: 'Miles',
+            data: [53.091276104000045,
+                   53.365012904,
+                   62.13963559233776,
+                   49.99136019899997,
+                   53.492864220999955,
+                   54.66567237400004,
+                   57.53019095100001,
+                   111.8284194850002,
+                   150.62394557960016,
+                   131.66975511299987,
+                   100.51984106299989,
+                   64.96659686319995,
+                   99.34404218160003,
+                   99.73960077399975,
+                   107.72694779300005,
+                   115.94463400399991,
+                   49.20620649329999,
+                   38.646855183299955,
+                   39.37169753009999,
+                   72.22403724470001,
+                   105.80690894859985,
+                   98.10980704709989,
+                   104.65047925799986,
+                   45.777158838000055],
+            backgroundColor: 'red',
+            borderWidth: 1
+        }]
+    },
+    options: {
+      responsive: true,
+
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
