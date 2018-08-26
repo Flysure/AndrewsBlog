@@ -1,60 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AndrewsBlog</title>
+    <title>Andrew Fleischer</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.scss">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-      <!-- Hero head: will stick at the top -->
-
-        <header class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <%= link_to "Andrew Fleischer", root_path, class: "navbar-item" %>
-
-              <span class="navbar-burger burger" data-target="navbarMenuHeroC">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
-              <div class="navbar-end">
-                <%= link_to "Home", root_path, class: "navbar-item is-active" %>
-                <%= link_to "Projects", projects_path, class: "navbar-item" %>
-                <span class="navbar-item">
-                  <a class="button is-info is-inverted" href='https://www.linkedin.com/in/andrew-fleischer1997' target="_blank">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>LinkedIn</span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a class="button is-info is-inverted" href='https://github.com/Flysure' target="_blank">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>GitHub</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-
-        </header>
-</div>
-
       <%= yield %>
-
-
-
-
 
   </body>
 </html>
