@@ -10,7 +10,7 @@ html,body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  animation: breath 15s linear infinite;
+  animation: breath 20s linear infinite;
 
 }
 .hero .nav, .hero.is-success .nav {
@@ -26,8 +26,17 @@ html,body {
   margin-top: 3%;
 }
 
+article{
+  -webkit-animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 @keyframes breath {
   0%   { background-size: 100% auto; }
-  50% { background-size: 140% auto; }
+  50% { background-size: 160% auto; }
   100% { background-size: 100% auto; }
 }
