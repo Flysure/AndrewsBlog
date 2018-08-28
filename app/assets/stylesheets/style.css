@@ -26,8 +26,8 @@ html,body {
   margin-top: 3%;
 }
 
-article{
-  -webkit-animation: fadein 2s;
+.fadein{
+  -webkit-animation: fadein 1.35s;
 }
 
 @-webkit-keyframes fadein {

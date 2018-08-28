@@ -44,57 +44,79 @@
               </div>
           </div>
   </nav>
-  <div class="content is-size-6 offset">
+  <div class="content is-size-6 offset fadein">
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+          Data Mining Apple Health App Data
+          </h1>
+          <h2 class="subtitle">
+            Using <strong>Python</strong> and the <strong>Pandas</strong> library, I take dive into nearly 3 years of health
+            contained in the app
+          </h2>
+        </div>
+      </div>
+    </section>
 
-    <h2 >Data Mining Apple Health App Data</h2>
-    <div class="introduction">
-    <p class="subtitle is-5">Using <strong>Python</strong> and the <strong>Pandas</strong> library, I take dive into nearly 3 years of health
-    contained in the app</p>
-    <blockquote>
-      <ol>
+    <div class="introduction box">
+      <ul>
         <li>How much do I walk regularly?</li>
         <li>Do I walk more or less on weekends?</li>
         <li>Do I walk more or less during the school year?</li>
         <li>Are there anomalies that I can find?</li>
-      </ol>
-    </blockquote>
+      </ul>
 
-    <p>I ended up with three csv files after exporting the data and then converting the
-    XML file to a CSV through <a href="http://ericwolter.com/projects/health-export.html" target="_blank">this</a> free tool</p>
-<blockquote>
-    <ol>
-      <li>RunningWalking.csv</li>
-      <li>Steps.csv</li>
-      <li>Sleep.csv</li>
-    </ol>
-  </blockquote>
+    <p><a href="http://ericwolter.com/projects/health-export.html" target="_blank">this</a> free tool to convert XML to CSV format</p>
+
 
     </div>
     <p>First, I took a look at RunningWalking.csv. The data starts in May of 2015
     and continues to the present day.</p>
     <div class="columns">
       <div class="column">
+        <canvas id="yearWalk" width="350" height="200"></canvas>
       </div>
-      <div class="column">
-        <canvas id="yearWalk" width="600" height="300"></canvas>
-      </div>
-      <div class="column">
+      <div class="column is-two-thirds box">
       </div>
     </div>
-    <p>On Average, I walked 2.52 miles a day over the whole entire time period</p>
+    <br>
     <div class="columns">
-      <div class="column">
+
+      <div class="column box">
+        <ul>
+          <li>In September of 2016 I walked <strong>150 miles</strong></li>
+          <ul>
+            <li>This one of my first months in College and I refused to buy a
+              bike or use other modes of transportation </li>
+          </ul>
+          <li>in June of 2017 I only walked <strong>38 miles</strong></li>
+          <ul>
+            <li>This Summer I did not spend a lot of time walking since I drove
+               a couple miles to work. I also often went out without my phone. </li>
+          </ul>
+        </ul>
+
+      </div>
+      <div class="column is-two-thirds">
+                <canvas id="monthWalk"  width="800" height="400"></canvas>
 </div>
 
+  </div>
+  <div class="columns">
+    <div class="column">
+      <h5 class="has-text-centered">May 2016 - Present</h5>
+      <table border="1" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">  <thead>    <tr style="text-align: right;">      <th>Day of Week</th>      <th>Avg Miles</th>    </tr>  </thead>  <tbody>    <tr>      <td>Monday</td>      <td>2.629187</td>    </tr>    <tr>      <td>Tuesday</td>      <td>2.878348</td>
+      </tr>    <tr>      <td>Wednesday</td>      <td>2.941920</td>    </tr>    <tr>      <td>Thursday</td>      <td>2.717192</td>    </tr>    <tr>      <td>Friday</td>      <td>2.767765</td>    </tr>    <tr>      <td>Saturday</td>      <td>2.495019</td>    </tr>    <tr>      <td>Sunday</td>      <td>1.966756</td>    </tr>  </tbody></table>
 
-      <div class="column">
-        <canvas id="monthWalk"  width="800" height="400"></canvas>
-      </div>
-      <div class="column">
-      </div>
+    </div>
+    <div class="column is-two-thirds box">
+
+    </div>
+
 
   </div>
-
+</div>
 </div>
 <script>
 var ctx = document.getElementById("yearWalk").getContext('2d');
