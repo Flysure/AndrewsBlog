@@ -69,16 +69,23 @@
 
     <p><a href="http://ericwolter.com/projects/health-export.html" target="_blank">this</a> free tool to convert XML to CSV format</p>
 
-
-    </div>
     <p>First, I took a look at RunningWalking.csv. The data starts in May of 2015
     and continues to the present day.</p>
+    </div>
+
     <div class="columns">
       <div class="column">
         <canvas id="yearWalk" width="350" height="200"></canvas>
       </div>
       <div class="column is-two-thirds box">
+          <%= image_tag("boxplot.png") %>
       </div>
+    </div>
+    <div class="box">
+    Description of the above information
+    median - 2.04
+    min - 0.034
+    max - 11.07
     </div>
     <br>
     <div class="columns">
@@ -116,6 +123,7 @@
 
 
   </div>
+  
 </div>
 </div>
 <script>
