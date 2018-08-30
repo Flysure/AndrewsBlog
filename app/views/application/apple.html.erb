@@ -45,19 +45,12 @@
           </div>
   </nav>
   <div class="content is-size-6 offset fadein">
-    <section class="hero is-small">
-      <div class="hero-body">
         <div class="container">
-          <h1 class="title">
+          <h1 class="title is-2">
           Data Mining Apple Health App Data
           </h1>
-          <h2 class="subtitle">
-            Using <strong>Python</strong> and the <strong>Pandas</strong> library, I take dive into nearly 3 years of health
-            contained in the app
-          </h2>
+          <h2 class="subtitle is-4">3 Years Contained Analyzed with Python Pandas</h2>
         </div>
-      </div>
-    </section>
 
     <div class="introduction box">
       <ul>
@@ -77,30 +70,42 @@
       <div class="column">
         <canvas id="yearWalk" width="350" height="200"></canvas>
       </div>
-      <div class="column is-two-thirds box">
+      <div class="column is-two-thirds">
           <%= image_tag("boxplot.png") %>
       </div>
     </div>
-    <div class="box">
-    Description of the above information
-    median - 2.04
-    min - 0.034
-    max - 11.07
+    <div class="columns box">
+      <div class="column">
+        I walked nearly the same amount in 2016 and 2017, and I'm on pace to be similar in 2018
+      </div>
+      <div class="column">
+        A boxplot of miles per day, gives a nice summary of
+        the spread and outliers. I walked more than 2.04
+        miles 50% of days recorded
+
+      </div>
+      <div class="column">
+          <strong>Min</strong> - 0.034 miles <br>
+          <strong>Median</strong> - 2.04 miles <br>
+          <strong>Max</strong> - 11.07 miles<br>
+      </div>
     </div>
+
     <br>
     <div class="columns">
 
       <div class="column box">
+        <br>
         <ul>
           <li>In September of 2016 I walked <strong>150 miles</strong></li>
           <ul>
-            <li>This one of my first months in College and I refused to buy a
-              bike or use other modes of transportation </li>
+            <li>This was my first full month of college living on OSU campus.
+            Not knowing my way around contributed to a lot of wandering </li>
           </ul>
-          <li>in June of 2017 I only walked <strong>38 miles</strong></li>
+          <li>In June of 2017 I only walked <strong>38 miles</strong></li>
           <ul>
-            <li>This Summer I did not spend a lot of time walking since I drove
-               a couple miles to work. I also often went out without my phone. </li>
+            <li>This Summer I had a short driving commute to work and
+            if I went out, I rarely took my phone with me.  </li>
           </ul>
         </ul>
 
@@ -112,12 +117,25 @@
   </div>
   <div class="columns">
     <div class="column">
-      <h5 class="has-text-centered">May 2016 - Present</h5>
+      <h5 class="has-text-centered">May 2016 - August 2018</h5>
       <table border="1" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">  <thead>    <tr style="text-align: right;">      <th>Day of Week</th>      <th>Avg Miles</th>    </tr>  </thead>  <tbody>    <tr>      <td>Monday</td>      <td>2.629187</td>    </tr>    <tr>      <td>Tuesday</td>      <td>2.878348</td>
       </tr>    <tr>      <td>Wednesday</td>      <td>2.941920</td>    </tr>    <tr>      <td>Thursday</td>      <td>2.717192</td>    </tr>    <tr>      <td>Friday</td>      <td>2.767765</td>    </tr>    <tr>      <td>Saturday</td>      <td>2.495019</td>    </tr>    <tr>      <td>Sunday</td>      <td>1.966756</td>    </tr>  </tbody></table>
 
     </div>
     <div class="column is-two-thirds box">
+      <br>
+      <ul>
+        <li>Saturday and Sunday were the two lowest days</li>
+        <ul>
+          <li><strong>Sunday</strong> was the absolute lowest, to be expected as it always my day off</li>
+        </ul>
+        <li>My mean miles per day total was <strong>2.52 miles</strong></li>
+        <ul>
+          <li>This is a .5 miles increase from the median</li>
+          <li>Miles per day are bunched more toward lower end of scale</li>
+        </ul>
+        <li>I walk most on <strong>Wednesday</strong></li>
+      </ul>
 
     </div>
 
@@ -125,7 +143,12 @@
   </div>
   <div class="columns">
     <div class="column box">
-
+      <br>
+      <p>This is a direct comparison between miles walked and
+      flight of stairs climbed. Initially, I expected there to be
+      a strong correllation bewteen these variables. <br><br>Hypothesis: If one walks
+      more miles, they walk up more stairs.<br><br>As it turns out, R^2 value is __.
+      A relatively low correllation counteracts my intial idea.</p>
     </div>
     <div class="column is-two-thirds">
       <canvas id="scatter"  width="800" height="400"></canvas>
@@ -151,6 +174,13 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      title: {
+            display: true,
+            text: 'Miles Walked By Year'
+        },
+      legend: {
+            display: false
+         },
       responsive: true,
 
         scales: {
@@ -200,6 +230,13 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
+      title: {
+            display: true,
+            text: 'Miles Walked By Month and Year 2016-2017'
+        },
+      legend: {
+            display: false
+         },
       responsive: true,
 
         scales: {
@@ -216,7 +253,7 @@ var scatterChart = new Chart(ctx, {
     type: 'scatter',
     data: {
         datasets: [{
-            label: 'Scatter Dataset',
+            label: 'Miles, Stairs',
             borderColor: 'red',
 				    backgroundColor: 'rgba(255, 99, 132, 0.2)',
             data: [{x: 1.8639949590000002, y: 6.0},
@@ -1386,11 +1423,17 @@ var scatterChart = new Chart(ctx, {
         }]
     },
     options: {
+      legend: {
+            display: false
+         },
+      title: {
+            display: true,
+            text: 'Miles Walked Vs. Flights Climbed '
+        },
         scales: {
             xAxes: [{
                 type: 'linear',
-                position: 'bottom'
-            }]
+                position: 'bottom'            }]
         }
     }
 });
