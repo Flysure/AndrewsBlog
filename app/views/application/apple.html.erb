@@ -49,21 +49,19 @@
           <h1 class="title is-2">
           Data Mining Apple Health App Data
           </h1>
-          <h2 class="subtitle is-4">3 Years Contained Analyzed with Python Pandas</h2>
+          <h2 class="subtitle is-4">Three Years Walking/Running and Stairs Data Analyzed</h2>
         </div>
-
-    <div class="introduction box">
+<hr>
+    <div class="introduction box is-size-5">
+      <p>Some questions that I am looking to answer:</p>
       <ul>
         <li>How much do I walk regularly?</li>
         <li>Do I walk more or less on weekends?</li>
-        <li>Do I walk more or less during the school year?</li>
-        <li>Are there anomalies that I can find?</li>
+        <li>In which season do I walk more or less?</li>
+        <li>How does walking compare with stairs climbed?</li>
       </ul>
 
-    <p><a href="http://ericwolter.com/projects/health-export.html" target="_blank">this</a> free tool to convert XML to CSV format</p>
 
-    <p>First, I took a look at RunningWalking.csv. The data starts in May of 2015
-    and continues to the present day.</p>
     </div>
 
     <div class="columns">
@@ -76,12 +74,12 @@
     </div>
     <div class="columns box">
       <div class="column">
-        I walked nearly the same amount in 2016 and 2017, and I'm on pace to be similar in 2018
+        My data begins in May of 2015.
+        I walked nearly the same amount in 2016 and 2017, and I'm on pace for a similar amount in 2018.
       </div>
       <div class="column">
-        A boxplot of miles per day, gives a nice summary of
-        the spread and outliers. I walked more than 2.04
-        miles 50% of days recorded
+        A boxplot of miles per day - gives a nice summary of
+        the spread and outliers.
 
       </div>
       <div class="column">
@@ -95,8 +93,9 @@
     <div class="columns">
 
       <div class="column box">
-        <br>
+        <p class='is-size-5'>How much do I walk regularly?</p>
         <ul>
+
           <li>In September of 2016 I walked <strong>150 miles</strong></li>
           <ul>
             <li>This was my first full month of college living on OSU campus.
@@ -107,6 +106,8 @@
             <li>This Summer I had a short driving commute to work and
             if I went out, I rarely took my phone with me.  </li>
           </ul>
+          <li>I only pulled 2016 and 2017 for this graph because I wanted to see
+          if I could compare patterns for full years rather than partially recorded years</li>
         </ul>
 
       </div>
@@ -123,31 +124,33 @@
 
     </div>
     <div class="column is-two-thirds box">
-      <br>
+      <p class='is-size-5'>Do I walk more or less on weekends?</p>
       <ul>
-        <li>Saturday and Sunday were the two lowest days</li>
+        <li>Saturday and Sunday were my two lowest days</li>
         <ul>
           <li><strong>Sunday</strong> was the absolute lowest, to be expected as it always my day off</li>
         </ul>
         <li>My mean miles per day total was <strong>2.52 miles</strong></li>
         <ul>
           <li>This is a .5 miles increase from the median</li>
-          <li>Miles per day are bunched more toward lower end of scale</li>
+          <li>Miles per day are bunched more toward lower end of scale as shown in boxplot</li>
         </ul>
-        <li>I walk most on <strong>Wednesday</strong></li>
+        <li>I walk most on <strong>Wednesdays</strong></li>
       </ul>
 
     </div>
 
 
   </div>
+  <br>
+
   <div class="columns">
     <div class="column box">
-      <br>
+      <p class='is-size-5'>How does walking compare with stairs climbed?</p>
       <p>This is a direct comparison between miles walked and
       flight of stairs climbed. Initially, I expected there to be
-      a strong correllation bewteen these variables. <br><br>Hypothesis: If one walks
-      more miles, they walk up more stairs.<br><br>As it turns out, R^2 value is __.
+      a strong correllation bewteen these variables.<blockquote><strong>Hypothesis</strong>: As running/walking
+        miles increase, flights climbed increase as well. And vice versa.</blockquote>As it turns out, R^2 value is __.
       A relatively low correllation counteracts my intial idea.</p>
     </div>
     <div class="column is-two-thirds">
@@ -156,6 +159,10 @@
     </div>
 
   </div>
+  <p>I used <a href="http://ericwolter.com/projects/health-export.html" target="_blank">this</a> free tool to convert XML to CSV format</p>
+
+  <p>The data starts in May of 2015
+  and continues to when I am making this, August 2018</p>
 </div>
 </div>
 <script>
@@ -176,7 +183,7 @@ var myChart = new Chart(ctx, {
     options: {
       title: {
             display: true,
-            text: 'Miles Walked By Year'
+            text: 'Miles Tracked By Year 05/15 - 08/2018'
         },
       legend: {
             display: false
@@ -185,6 +192,10 @@ var myChart = new Chart(ctx, {
 
         scales: {
             yAxes: [{
+              scaleLabel: {
+        display: true,
+        labelString: 'Miles'
+      },
                 ticks: {
                     beginAtZero:true
                 }
@@ -232,7 +243,7 @@ var myChart = new Chart(ctx, {
     options: {
       title: {
             display: true,
-            text: 'Miles Walked By Month and Year 2016-2017'
+            text: 'Miles Tracked By Month and Year 2016-2017'
         },
       legend: {
             display: false
@@ -241,10 +252,19 @@ var myChart = new Chart(ctx, {
 
         scales: {
             yAxes: [{
+              scaleLabel: {
+        display: true,
+        labelString: 'Miles'
+      },
                 ticks: {
                     beginAtZero:true
                 }
-            }]
+            }],
+            xAxes: [{
+              scaleLabel: {
+        display: true,
+        labelString: 'Month, Year'
+      }}]
         }
     }
 });
@@ -1428,12 +1448,24 @@ var scatterChart = new Chart(ctx, {
          },
       title: {
             display: true,
-            text: 'Miles Walked Vs. Flights Climbed '
+            text: 'Miles Walked Vs. Flights Climbed By Day'
         },
         scales: {
+          yAxes: [{
+     scaleLabel: {
+       display: true,
+       labelString: 'Flights Climbed'
+     }
+   }],
             xAxes: [{
+              scaleLabel: {
+                display: true,
+                labelString: 'Miles Tracked'
+              },
                 type: 'linear',
-                position: 'bottom'            }]
+                position: 'bottom'
+
+               }]
         }
     }
 });
