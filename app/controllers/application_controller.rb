@@ -10,4 +10,6 @@ class ApplicationController < ActionController::Base
   end
   def apple
   end
+  def webscraping
+  end
 end
