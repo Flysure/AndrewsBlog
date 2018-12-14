@@ -1,52 +1,7 @@
-<!DOCTYPE html>
-<html>
 
-<body>
     <section class="hero is-info is-fullheight">
         <div class="hero-head">
-          <nav class="navbar">
-              <div class="container">
-                  <div class="navbar-brand">
-                    <span class="navbar-item">
-                        <a class="button is-white is-outlined" href="#">
-                            <span class="icon">
-                                <i class="fa fa-home"></i>
-                            </span>
-                            <span>Home</span>
-                        </a>
-                    </span>
-                      <span class="navbar-burger burger" data-target="navbarMenu">
-                          <span></span>
-                          <span></span>
-                          <span></span>
-                      </span>
-                  </div>
-                  <div id="navbarMenu" class="navbar-menu">
-                      <div class="navbar-end">
-
-
-
-
-                          <span class="navbar-item">
-                              <a class="button is-white is-outlined" href="https://www.linkedin.com/in/andrew-fleischer1997/" target="_blank">
-                                  <span class="icon">
-                                      <i class="fa fa fa-linkedin-square"></i>
-                                  </span>
-                                  <span>LinkedIn</span>
-                              </a>
-                          </span>
-                          <span class="navbar-item">
-                              <a class="button is-white is-outlined" href="https://github.com/Flysure" target="_blank">
-                                  <span class="icon">
-                                      <i class="fa fa-github"></i>
-                                  </span>
-                                  <span>Github</span>
-                              </a>
-                          </span>
-                      </div>
-                  </div>
-              </div>
-          </nav>
+            <%= render(:partial => "navbar", :locals => {:color => "white"}) %>
             </div>
 
             <div class="hero-body">
@@ -71,6 +26,3 @@
             </div>
 
     </section>
-</body>
-
-</html>
