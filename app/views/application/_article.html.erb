@@ -1,0 +1,21 @@
+<article class="media offset is-size-4 fadein">
+<figure class="media-left">
+  <p class="image is-96x96">
+    <%= image_tag(image) %>
+  </p>
+</figure>
+<div class="media-content">
+  <div class="content">
+    <%= link_to(link) do %>
+    <p>
+      <strong><%=title%></strong>  <small><%=date %></small>
+      <% end %>
+
+      <br>
+      <%=description%>
+    </p>
+  </div>
+
+</div>
+
+</article>

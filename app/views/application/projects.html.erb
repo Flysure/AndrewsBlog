@@ -37,92 +37,28 @@
               </div>
           </div>
   </nav>
-  <article class="media offset is-size-4 fadein">
-  <figure class="media-left">
-    <p class="image is-96x96">
-      <%= image_tag("osu.jpg") %>
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <%= link_to("https://project-6-fcdb.herokuapp.com", :target => '_blank') do %>
-      <p>
-        <strong>Grader Matching Application</strong>  <small>12/13/2018</small>
-        <% end %>
+  <%= render(:partial => "article", :locals => {:image => "osu.jpg",
+  :title => "Grader Matching Application", :date => "12/13/2018",
+  :link => "https://project-6-fcdb.herokuapp.com",
+  :description => "OSU CSE 3901 Ruby on Rails final group project that matches graders with classes.
+   Involves different types of users and complex modeling."})%>
 
-        <br>
-        OSU CSE 3901 Ruby on Rails final group project that matches graders with classes.
-         Involves different types of users and complex modeling.
-      </p>
-    </div>
+   <%= render(:partial => "article", :locals => {:image => "scraper-tool.jpg",
+   :title => "Webscraping Police Records with Python", :date => "11/7/2018",
+   :link => webscraping_path,
+   :description => "Pulling records from Columbus Police Portal."})%>
 
-  </div>
+   <%= render(:partial => "article", :locals => {:image => "health-app.png",
+   :title => "Health Data Exploration", :date => "8/24/2018",
+   :link => apple_path,
+   :description => "Exploring my iphone's health data dating back to 2015 using Python. Use of Pandas and Chart.js library."})%>
 
-</article>
-<article class="media offset is-size-4 fadein">
-<figure class="media-left">
-  <p class="image is-96x96">
-    <%= image_tag("scraper-tool.jpg") %>
-  </p>
-</figure>
-<div class="media-content">
-  <div class="content">
+   <%= render(:partial => "article", :locals => {:image => "pothole.png",
+   :title => "Pothole Radar", :date => "8/24/2018",
+   :link => "https://pothole-radar.herokuapp.com/potholes",
+   :description => "Ruby on Rails application to mark potholes and view potholes around you. Involves the use of
+   google maps API and JavaScript-heavy functionality."})%>
 
-    <%= link_to(webscraping_path) do %>
-    <p>
-      <strong>Webscraping Police Records with Python</strong> <small>11/7/2018</small>
-      <% end %>
 
-      <br>
-      Pulling records from Columbus Police Portal.
-    </p>
-  </div>
-
-</div>
-
-</article>
-  <article class="media offset is-size-4 fadein">
-  <figure class="media-left">
-    <p class="image is-96x96">
-      <%= image_tag("health-app.png") %>
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="content">
-      <%= link_to(apple_path) do %>
-      <p>
-        <strong>Health Data Exploration</strong>  <small>8/24/2018</small>
-        <% end %>
-
-        <br>
-        Exploring my iphone's health data dating back to 2015 using Python. Use of Pandas and Chart.js library.
-      </p>
-    </div>
-
-  </div>
-
-</article>
-<article class="media offset is-size-4 fadein">
-<figure class="media-left">
-  <p class="image is-96x96">
-    <%= image_tag("pothole.png") %>
-  </p>
-</figure>
-<div class="media-content">
-  <div class="content">
-    <%= link_to("https://pothole-radar.herokuapp.com/potholes", :target => '_blank') do %>
-    <p>
-      <strong>Pothole Radar</strong>  <small>8/24/2018</small>
-      <% end %>
-
-      <br>
-      Ruby on Rails application to mark potholes and view potholes around you. Involves the use of
-      google maps API and JavaScript-heavy functionality.
-    </p>
-  </div>
-
-</div>
-
-</article>
 </div>
 </div>
