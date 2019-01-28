@@ -29,14 +29,3 @@ html,body {
 .fadein{
   -webkit-animation: fadein 1.35s;
 }
-
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes breath {
-  0%   { background-size: 100% auto; }
-  50% { background-size: 160% auto; }
-  100% { background-size: 100% auto; }
-}
