@@ -22,4 +22,4 @@ test:
 
 production:
   <<: postgresql
-  database: my_db
+  database: my_database_production
