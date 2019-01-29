@@ -22,4 +22,4 @@ test:
 
 production:
   <<: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  url: db/development.sqlite3
