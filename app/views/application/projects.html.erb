@@ -1,6 +1,11 @@
 <div class="container">
   <%= render(:partial => "navbar", :locals => {:color => "black"}) %>
 
+  <%= render(:partial => "article", :locals => {:image => "Calc.png",
+  :title => "Techlectro.com", :date => "1/10/2019",
+  :link => "http://Techlectro.com",
+  :description => "Website accompaniment to the iOS app 'Happy EE', an app for useful calcuations designed for Electrical Engineering students."})%>
+
   <%= render(:partial => "article", :locals => {:image => "osu.jpg",
   :title => "Grader Matching Application", :date => "12/13/2018",
   :link => "https://project-6-fcdb.herokuapp.com",
