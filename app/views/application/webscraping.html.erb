@@ -51,6 +51,403 @@
   </h1>
   <h2 class="subtitle is-4">Obtaing police records from Columbus Police Portal</h2>
   <div class="content">
+    <p>Interested in making an application out of crime data, the goal of this project was to extract that data
+    from the Columbus Police Crime Portal. <a href="https://github.com/Flysure/OSU-Crime/blob/master/test.py">This</a> link
+    shows the code that was used to scrape the data from google chrome web browser. The program also makes calls to geolocate the
+  address listed on the crime portal. The program in action:</p>
     <%= image_tag("webscraper.gif") %>
   </div>
+  <p>This scraper yeilds <a href="'http://www.columbuspolice.org/Reports/Results?from=9/19/2018&to=9/26/2018&loc=pct4&types=9'">this</a> page
+   into a .csv file:</p>
+  <table class="table table-bordered table-hover table-condensed">
+<thead><tr>
+<th title="Field #2">CRnumber</th>
+<th title="Field #3">Description</th>
+<th title="Field #4">Victim</th>
+<th title="Field #5">DateReported</th>
+<th title="Field #6">Location</th>
+<th title="Field #7">Lat</th>
+<th title="Field #8">Lng</th>
+</tr></thead>
+<tbody><tr>
+
+<td>180792318-001</td>
+<td>450 - Robbery</td>
+<td>Benjamin Hamilton</td>
+<td>09/19/2018</td>
+<td>1960 N High St</td>
+<td>40.00233</td>
+<td>-83.00849</td>
+</tr>
+<tr>
+
+<td>180792418-001</td>
+<td>551 - Criminal Damaging</td>
+<td> [E] Waffle House</td>
+<td>09/19/2018</td>
+<td>1712 N High St</td>
+<td>39.99746</td>
+<td>-83.00754</td>
+</tr>
+<tr>
+
+<td>183016232-001</td>
+<td>117 - Theft - From Motor Vehicle - Felony</td>
+<td>Danise White</td>
+<td>09/19/2018</td>
+<td>299 King Ave</td>
+<td>39.990437</td>
+<td>-83.01409</td>
+</tr>
+<tr>
+
+<td>180796962-001</td>
+<td>400 - Fraud</td>
+<td>Mariah Jordan</td>
+<td>09/20/2018</td>
+<td>1390 Indianola Ave</td>
+<td>39.99104</td>
+<td>-83.003174</td>
+</tr>
+<tr>
+
+<td>183016169-001</td>
+<td>118 - Theft - From Motor Vehicle - Petit</td>
+<td>Brooke Tracy</td>
+<td>09/20/2018</td>
+<td>73 E Frambes Ave</td>
+<td>40.004837</td>
+<td>-83.00671</td>
+</tr>
+<tr>
+
+<td>183016041-001</td>
+<td>400 - Fraud</td>
+<td>Xavier Casey</td>
+<td>09/20/2018</td>
+<td>1977 N 4th St</td>
+<td>40.00384</td>
+<td>-82.99849</td>
+</tr>
+<tr>
+
+<td>180797975-001</td>
+<td>201 - Theft of License Plate</td>
+<td>AMANDA DAVEY</td>
+<td>09/20/2018</td>
+<td>414 W 7th</td>
+<td>39.98955</td>
+<td>-83.01686</td>
+</tr>
+<tr>
+
+<td>180880603-001</td>
+<td>110 - Felony Theft - Zone 4</td>
+<td>Brian Buonocore</td>
+<td>09/21/2018</td>
+<td>1489 Grandview Ave</td>
+<td>39.987755</td>
+<td>-83.044556</td>
+</tr>
+<tr>
+
+<td>180801269-001</td>
+<td>254 - Assault</td>
+<td>Kimberly Wooden</td>
+<td>09/21/2018</td>
+<td>Ifo 1446 N 5th St Apt A</td>
+<td>Not found</td>
+<td>Not found</td>
+</tr>
+<tr>
+
+<td>180802653-001</td>
+<td>551 - Criminal Damaging</td>
+<td>Jason Kirkpatrick</td>
+<td>09/22/2018</td>
+<td>1353 N 4th St</td>
+<td>39.990826</td>
+<td>-82.99935</td>
+</tr>
+<tr>
+
+<td>180804404-001</td>
+<td>550 - Trespassing</td>
+<td>No data provided</td>
+<td>09/22/2018</td>
+<td>1442 N 5th St Apt A</td>
+<td>39.99285</td>
+<td>-82.99798</td>
+</tr>
+<tr>
+
+<td>180805416-001</td>
+<td>712 - Disorderly Conduct</td>
+<td>No data provided</td>
+<td>09/22/2018</td>
+<td>450 E Norwich Ave</td>
+<td>40.006138</td>
+<td>-82.99667</td>
+</tr>
+<tr>
+
+<td>180805452-001</td>
+<td>254 - Assault</td>
+<td>Katarina Hodge</td>
+<td>09/22/2018</td>
+<td>1728 N High St</td>
+<td>39.99774</td>
+<td>-83.00759</td>
+</tr>
+<tr>
+
+<td>180805585-001</td>
+<td>550 - Trespassing</td>
+<td>No data provided</td>
+<td>09/23/2018</td>
+<td>1770 N High St</td>
+<td>39.998478</td>
+<td>-83.00774</td>
+</tr>
+<tr>
+
+<td>180805678-001</td>
+<td>254 - Assault</td>
+<td>Evan Bunis</td>
+<td>09/23/2018</td>
+<td>1100 N High St</td>
+<td>39.984886</td>
+<td>-83.00506</td>
+</tr>
+<tr>
+
+<td>180805697-001</td>
+<td>701 - Miscellaneous Offense</td>
+<td>No data provided</td>
+<td>09/23/2018</td>
+<td>1770 N High St</td>
+<td>39.998478</td>
+<td>-83.00774</td>
+</tr>
+<tr>
+
+<td>180806636-001</td>
+<td>115 - Theft - Misdemeanor</td>
+<td> [E] Floral Boutique</td>
+<td>09/23/2018</td>
+<td>215 King Ave</td>
+<td>39.990364</td>
+<td>-83.01214</td>
+</tr>
+<tr>
+
+<td>180806875-001</td>
+<td>200 - Motor Vehicle Theft</td>
+<td>Connor Lucas</td>
+<td>09/23/2018</td>
+<td>1436 Meadow Rd</td>
+<td>39.987778</td>
+<td>-83.039024</td>
+</tr>
+<tr>
+
+<td>180807009-001</td>
+<td>200 - Motor Vehicle Theft</td>
+<td>David Coulter</td>
+<td>09/23/2018</td>
+<td>338 E 18th Ave</td>
+<td>40.002342</td>
+<td>-82.99921</td>
+</tr>
+<tr>
+
+<td>180807386-001</td>
+<td>104 - Burglary - Zone 4</td>
+<td>Adam Bonner</td>
+<td>09/23/2018</td>
+<td>964 N 4th St</td>
+<td>39.982735</td>
+<td>-82.998764</td>
+</tr>
+<tr>
+
+<td>180807386-001</td>
+<td>104 - Burglary - Zone 4</td>
+<td>Parker Steenburgh</td>
+<td>09/23/2018</td>
+<td>964 N 4th St</td>
+<td>39.982735</td>
+<td>-82.998764</td>
+</tr>
+<tr>
+
+<td>180808165-001</td>
+<td>260 - Discharged Firearms - Occupied Structure</td>
+<td>No data provided</td>
+<td>09/23/2018</td>
+<td>1826 N 4th St</td>
+<td>40.000507</td>
+<td>-82.99867</td>
+</tr>
+<tr>
+
+<td>183016241-001</td>
+<td>115 - Theft - Misdemeanor</td>
+<td>Shana Sankey</td>
+<td>09/24/2018</td>
+<td>444 E 15th Ave</td>
+<td>39.999474</td>
+<td>-82.996025</td>
+</tr>
+<tr>
+
+<td>183016157-001</td>
+<td>300 - Rape/Sexual Assault Vic 16 Yr and Older</td>
+<td>CRIME VICTIM</td>
+<td>09/24/2018</td>
+<td>41 - 41 District</td>
+<td>Not found</td>
+<td>Not found</td>
+</tr>
+<tr>
+
+<td>183016203-001</td>
+<td>400 - Fraud</td>
+<td>Arlington Bell</td>
+<td>09/24/2018</td>
+<td>1350 N High St</td>
+<td>39.989872</td>
+<td>-83.00604</td>
+</tr>
+<tr>
+
+<td>183016243-001</td>
+<td>115 - Theft - Misdemeanor</td>
+<td>Cearra Keller</td>
+<td>09/24/2018</td>
+<td>1112 N High St</td>
+<td>39.985115</td>
+<td>-83.005104</td>
+</tr>
+<tr>
+
+<td>180810657-001</td>
+<td>712 - Disorderly Conduct</td>
+<td>No data provided</td>
+<td>09/24/2018</td>
+<td>N High St &amp; E 13th Ave</td>
+<td>Not found</td>
+<td>Not found</td>
+</tr>
+<tr>
+
+<td>183016218-001</td>
+<td>400 - Fraud</td>
+<td>Xavier Casey</td>
+<td>09/24/2018</td>
+<td>1977 N 4th St</td>
+<td>40.00384</td>
+<td>-82.99849</td>
+</tr>
+<tr>
+
+<td>180809798-001</td>
+<td>118 - Theft - From Motor Vehicle - Petit</td>
+<td> [E] ZHIYUAN CAI</td>
+<td>09/24/2018</td>
+<td>1493 N High St</td>
+<td>39.992756</td>
+<td>-83.006645</td>
+</tr>
+<tr>
+
+<td>180811139-001</td>
+<td>550 - Trespassing</td>
+<td>No data provided</td>
+<td>09/25/2018</td>
+<td>1227 N High St</td>
+<td>39.987457</td>
+<td>-83.0056</td>
+</tr>
+<tr>
+
+<td>180811139-001</td>
+<td>550 - Trespassing</td>
+<td> [E] Condado Tacos</td>
+<td>09/25/2018</td>
+<td>1227 N High St</td>
+<td>39.987457</td>
+<td>-83.0056</td>
+</tr>
+<tr>
+
+<td>180811075-001</td>
+<td>450 - Robbery</td>
+<td>Icidoro Moraels</td>
+<td>09/25/2018</td>
+<td>1239 W 5th Ave</td>
+<td>39.988525</td>
+<td>-83.0394</td>
+</tr>
+<tr>
+
+<td>180811075-001</td>
+<td>450 - Robbery</td>
+<td>Rafael Pablo</td>
+<td>09/25/2018</td>
+<td>1239 W 5th Ave</td>
+<td>39.988525</td>
+<td>-83.0394</td>
+</tr>
+<tr>
+
+<td>180811075-001</td>
+<td>450 - Robbery</td>
+<td>Angelo Vargas</td>
+<td>09/25/2018</td>
+<td>1239 W 5th Ave</td>
+<td>39.988525</td>
+<td>-83.0394</td>
+</tr>
+<tr>
+
+<td>183016651-001</td>
+<td>117 - Theft - From Motor Vehicle - Felony</td>
+<td>Eugene Wilson</td>
+<td>09/25/2018</td>
+<td>21 Smith Pl</td>
+<td>39.98813</td>
+<td>-83.00629</td>
+</tr>
+<tr>
+
+<td>180811814-001</td>
+<td>200 - Motor Vehicle Theft</td>
+<td>MYKALAH ANDERSON</td>
+<td>09/25/2018</td>
+<td>90 Mcmillen Ave</td>
+<td>39.990997</td>
+<td>-83.0087</td>
+</tr>
+<tr>
+
+<td>180813933-001</td>
+<td>551 - Criminal Damaging</td>
+<td>Robert Purcell</td>
+<td>09/25/2018</td>
+<td>71 E 5th Ave</td>
+<td>39.987015</td>
+<td>-83.00346</td>
+</tr>
+<tr>
+
+<td>183016542-001</td>
+<td>118 - Theft - From Motor Vehicle - Petit</td>
+<td>MICHAEL HIMES</td>
+<td>09/26/2018</td>
+<td>75 E 14th Ave</td>
+<td>39.99879</td>
+<td>-83.005646</td>
+</tr>
+</tbody></table>
 </div>
