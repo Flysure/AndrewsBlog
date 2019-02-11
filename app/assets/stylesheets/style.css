@@ -29,3 +29,8 @@ html,body {
 .fadein{
   -webkit-animation: fadein 1.35s;
 }
+
+.centered-image{
+  display: block;
+  margin: 0 auto;
+}

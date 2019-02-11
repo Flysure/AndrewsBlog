@@ -54,11 +54,14 @@
     <p>Interested in making an application out of crime data, the goal of this project was to extract that data
     from the Columbus Police Crime Portal. <a href="https://github.com/Flysure/OSU-Crime/blob/master/test.py">This</a> link
     shows the code that was used to scrape the data from google chrome web browser. The program also makes calls to geolocate the
-  address listed on the crime portal. The program in action:</p>
-    <%= image_tag("webscraper.gif") %>
+  address listed on the crime portal. The program in action:</p><br>
+    <%= image_tag("webscraper.gif", :size => "900x500", :class => "centered-image") %>
   </div>
+  <br><br>
   <p>This scraper yeilds <a href="'http://www.columbuspolice.org/Reports/Results?from=9/19/2018&to=9/26/2018&loc=pct4&types=9'">this</a> page
    into a .csv file:</p>
+   <br>
+   <br>
   <table class="table table-bordered table-hover table-condensed">
 <thead><tr>
 <th title="Field #2">CRnumber</th>
@@ -259,195 +262,63 @@
 <td>40.002342</td>
 <td>-82.99921</td>
 </tr>
-<tr>
 
-<td>180807386-001</td>
-<td>104 - Burglary - Zone 4</td>
-<td>Adam Bonner</td>
-<td>09/23/2018</td>
-<td>964 N 4th St</td>
-<td>39.982735</td>
-<td>-82.998764</td>
-</tr>
-<tr>
 
-<td>180807386-001</td>
-<td>104 - Burglary - Zone 4</td>
-<td>Parker Steenburgh</td>
-<td>09/23/2018</td>
-<td>964 N 4th St</td>
-<td>39.982735</td>
-<td>-82.998764</td>
-</tr>
 <tr>
-
-<td>180808165-001</td>
-<td>260 - Discharged Firearms - Occupied Structure</td>
-<td>No data provided</td>
-<td>09/23/2018</td>
-<td>1826 N 4th St</td>
-<td>40.000507</td>
-<td>-82.99867</td>
-</tr>
-<tr>
-
-<td>183016241-001</td>
-<td>115 - Theft - Misdemeanor</td>
-<td>Shana Sankey</td>
-<td>09/24/2018</td>
-<td>444 E 15th Ave</td>
-<td>39.999474</td>
-<td>-82.996025</td>
-</tr>
-<tr>
-
-<td>183016157-001</td>
-<td>300 - Rape/Sexual Assault Vic 16 Yr and Older</td>
-<td>CRIME VICTIM</td>
-<td>09/24/2018</td>
-<td>41 - 41 District</td>
-<td>Not found</td>
-<td>Not found</td>
-</tr>
-<tr>
-
-<td>183016203-001</td>
-<td>400 - Fraud</td>
-<td>Arlington Bell</td>
-<td>09/24/2018</td>
-<td>1350 N High St</td>
-<td>39.989872</td>
-<td>-83.00604</td>
-</tr>
-<tr>
-
-<td>183016243-001</td>
-<td>115 - Theft - Misdemeanor</td>
-<td>Cearra Keller</td>
-<td>09/24/2018</td>
-<td>1112 N High St</td>
-<td>39.985115</td>
-<td>-83.005104</td>
-</tr>
-<tr>
-
-<td>180810657-001</td>
-<td>712 - Disorderly Conduct</td>
-<td>No data provided</td>
-<td>09/24/2018</td>
-<td>N High St &amp; E 13th Ave</td>
-<td>Not found</td>
-<td>Not found</td>
-</tr>
-<tr>
-
-<td>183016218-001</td>
-<td>400 - Fraud</td>
-<td>Xavier Casey</td>
-<td>09/24/2018</td>
-<td>1977 N 4th St</td>
-<td>40.00384</td>
-<td>-82.99849</td>
-</tr>
-<tr>
-
-<td>180809798-001</td>
-<td>118 - Theft - From Motor Vehicle - Petit</td>
-<td> [E] ZHIYUAN CAI</td>
-<td>09/24/2018</td>
-<td>1493 N High St</td>
-<td>39.992756</td>
-<td>-83.006645</td>
-</tr>
-<tr>
-
-<td>180811139-001</td>
-<td>550 - Trespassing</td>
-<td>No data provided</td>
-<td>09/25/2018</td>
-<td>1227 N High St</td>
-<td>39.987457</td>
-<td>-83.0056</td>
-</tr>
-<tr>
-
-<td>180811139-001</td>
-<td>550 - Trespassing</td>
-<td> [E] Condado Tacos</td>
-<td>09/25/2018</td>
-<td>1227 N High St</td>
-<td>39.987457</td>
-<td>-83.0056</td>
-</tr>
-<tr>
-
-<td>180811075-001</td>
-<td>450 - Robbery</td>
-<td>Icidoro Moraels</td>
-<td>09/25/2018</td>
-<td>1239 W 5th Ave</td>
-<td>39.988525</td>
-<td>-83.0394</td>
-</tr>
-<tr>
-
-<td>180811075-001</td>
-<td>450 - Robbery</td>
-<td>Rafael Pablo</td>
-<td>09/25/2018</td>
-<td>1239 W 5th Ave</td>
-<td>39.988525</td>
-<td>-83.0394</td>
-</tr>
-<tr>
-
-<td>180811075-001</td>
-<td>450 - Robbery</td>
-<td>Angelo Vargas</td>
-<td>09/25/2018</td>
-<td>1239 W 5th Ave</td>
-<td>39.988525</td>
-<td>-83.0394</td>
-</tr>
-<tr>
-
-<td>183016651-001</td>
-<td>117 - Theft - From Motor Vehicle - Felony</td>
-<td>Eugene Wilson</td>
-<td>09/25/2018</td>
-<td>21 Smith Pl</td>
-<td>39.98813</td>
-<td>-83.00629</td>
-</tr>
-<tr>
-
-<td>180811814-001</td>
-<td>200 - Motor Vehicle Theft</td>
-<td>MYKALAH ANDERSON</td>
-<td>09/25/2018</td>
-<td>90 Mcmillen Ave</td>
-<td>39.990997</td>
-<td>-83.0087</td>
-</tr>
-<tr>
-
-<td>180813933-001</td>
-<td>551 - Criminal Damaging</td>
-<td>Robert Purcell</td>
-<td>09/25/2018</td>
-<td>71 E 5th Ave</td>
-<td>39.987015</td>
-<td>-83.00346</td>
-</tr>
-<tr>
-
-<td>183016542-001</td>
-<td>118 - Theft - From Motor Vehicle - Petit</td>
-<td>MICHAEL HIMES</td>
-<td>09/26/2018</td>
-<td>75 E 14th Ave</td>
-<td>39.99879</td>
-<td>-83.005646</td>
-</tr>
 </tbody></table>
+<br><br>
+<p>Which can then be transformed into a heatmap to analyze:</p>
+ <br>
+ <br>
+<div id="mapid" class="centered-image"></div>
+<br><br>
 </div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<style media="screen">
+  #mapid { height: 500px;
+    width:1000px;
+   }
+</style>
+<script type="text/javascript">
+  var mymap = L.map('mapid').setView([40.00233,-83.00 ], 13);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZmx5c3VyZTE5OTciLCJhIjoiY2pta2xiMDRkMDIycTN1bnZiOGtuc3J1NCJ9.egiZOL0oX3eX4f-Atl9XWQ', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+
+var heat = L.heatLayer([
+	[39.99746,	-83.00754, 0.2], // lat, lng, intensity
+	[39.990437,	-83.01409, 0.5],
+  [39.99746,	-83.00754],
+  [39.990437,	-83.01409],
+  [39.99104	, -83.003174],
+  [40.004837	, -83.00671],
+  [40.00384	, -82.99849],
+  [39.98955	, -83.01686],
+  [39.990826	, -82.99935],
+  [39.99285	, -82.99798],
+  [40.006138	, -82.99667],
+  [39.99774	, -83.00759],
+  [39.998478	, -83.00774],
+  [39.984886	, -83.00506],
+  [39.998478	, -83.00774],
+  [39.990364	, -83.01214],
+  [39.987778	, -83.039024],
+  [40.002342	, -82.99921],
+  [39.982735	, -82.998764]
+], {radius: 50}).addTo(mymap);
+
+
+
+
+</script>
