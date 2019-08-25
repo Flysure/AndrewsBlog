@@ -47,61 +47,22 @@
   <div class="content is-size-6 offset fadein">
         <div class="container">
           <h1 class="title is-2">
-          Data Mining Apple Health App Data
+           Franklin County Traffic Violations
           </h1>
-          <h2 class="subtitle is-4">Three Years Walking/Running and Stairs Data Analyzed</h2>
+          <h2 class="subtitle is-4">Three months of traffic violations with outcomes</h2>
         </div>
 <hr>
-    <div class="introduction box is-size-5">
-      <div class="columns">
-        <div class="column">
-
-
-
-      <p>Some questions that I am looking to answer:</p>
-      <ul>
-        <li>How much do I walk regularly?</li>
-        <li>Do I walk more or less on weekends?</li>
-        <li>In which season do I walk more or less?</li>
-        <li>How does walking compare with stairs climbed?</li>
-      </ul>
-</div>
-<div class="column">
-
-  <p class="image is-128x128
-">
-    <%= image_tag("health-app.png") %>
-  </p>
-</div>
-</div>
-    </div>
 
     <div class="columns">
       <div class="column">
-        <canvas id="yearWalk" width="350" height="200"></canvas>
+        <canvas id="trafSex" width="350" height="200"></canvas>
       </div>
-      <div class="column is-two-thirds">
-          <%= image_tag("boxplot.png") %>
+      <div class="column is-one-half">
+        <canvas id="trafRace" width="350" height="200"></canvas>
       </div>
-    </div>
-    <div class="columns box">
-      <div class="column">
-        My data begins in May of 2015.
-        I walked nearly the same amount in 2016 and 2017, and I'm on pace for a similar amount in 2018
-      </div>
-      <div class="column">
-        A boxplot of miles per day - gives a nice summary of
-        the spread and outliers
 
-      </div>
-      <div class="column">
-          <strong>Min</strong> - 0.034 miles <br>
-          <strong>Median</strong> - 2.04 miles <br>
-          <strong>Max</strong> - 11.07 miles<br>
-      </div>
     </div>
 
-    <br>
     <div class="columns">
 
       <div class="column box">
@@ -124,7 +85,7 @@
 
       </div>
       <div class="column is-two-thirds">
-                <canvas id="monthWalk"  width="800" height="400"></canvas>
+                <canvas id="weekdayTraf"  width="800" height="400"></canvas>
 </div>
 
   </div>
@@ -221,53 +182,65 @@ new Chart(document.getElementById("line-chart"), {
     }
   }
 });
-var ctx = document.getElementById("yearWalk").getContext('2d');
+var ctx = document.getElementById("trafSex").getContext('2d');
+
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'doughnut',
     data: {
-        labels: ["2015","2016","2017","2018"],
         datasets: [{
             label: 'Miles',
-            data: [573.45, 940.36, 975.74, 490.39],
-            backgroundColor:   'rgba(255, 99, 132, 0.2)',
-            borderColor:   'rgba(255,99,132,1)',
+            data: [12993, 27748],
+            backgroundColor:   ['rgb(255, 128, 255, .2)', 'rgb(51, 51, 255, .2)'],
+            borderColor:   ['rgb(255, 128, 255)','rgb(51, 51, 255)'],
             borderWidth: 1
-        }]
+        }],
+        labels: ["Female","Male"],
     },
     options: {
       title: {
             display: true,
-            text: 'Miles Tracked By Year 05/15 - 08/2018'
+            text: 'Franklin County Traffic Violations By Sex'
         },
       legend: {
-            display: false
+            display: true
          },
-      responsive: true,
-
-        scales: {
-            yAxes: [{
-              scaleLabel: {
-        display: true,
-        labelString: 'Miles'
-      },
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
+      responsive: true
     }
 });
-var ctx = document.getElementById("monthWalk").getContext('2d');
+
+var ctx = document.getElementById("trafRace").getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        datasets: [{
+            label: 'Miles',
+            data: [19950, 17607, 2962],
+            backgroundColor:   ['rgb(255, 128, 255, .2)', 'rgb(51, 51, 255, .2)','rgb(0, 204, 153, .2)'],
+            borderColor:   ['rgb(255, 128, 255)','rgb(51, 51, 255), rgb(0, 204, 153)'],
+            borderWidth: 1
+        }],
+        labels: ["W","B", "O"],
+    },
+    options: {
+      title: {
+            display: true,
+            text: 'Franklin County Traffic Violations By Race'
+        },
+      legend: {
+            display: true
+         },
+      responsive: true
+    }
+});
+var ctx = document.getElementById("weekdayTraf").getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Jan 2016","Feb 2016","Mar 2016","Apr 2016","May 2016","June 2016",'Jul 2016', 'Aug 2016', "Sep 2016",'Oct 2016','Nov 2016', "Dec 2016",
-      "Jan 2017","Feb 2017","Mar 2017","Apr 2017","May 2017","June 2017",'Jul 2017', 'Aug 2017', "Sep 2017",'Oct 2017','Nov 2017', "Dec 2017"],
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         datasets: [{
-            label: 'Miles',
-            data:[ 52.46,  52.42,  61.06,  49.49,  53.37,  54.64,  57.49, 111.7 ,
-       150.51, 131.79, 100.47,  64.96,  99.21,  99.86, 107.55, 115.92,
-        49.21,  38.53,  39.4 ,  72.18, 105.75,  97.96, 104.46,  45.71],
+            label: 'Count',
+            data:[5231,5727,5820,6121,6958,6048,4944],
             backgroundColor: 'rgba(255, 99, 132, 0.2)',
               borderColor: 'red',
             borderWidth: 1
@@ -276,7 +249,7 @@ var myChart = new Chart(ctx, {
     options: {
       title: {
             display: true,
-            text: 'Miles Tracked By Month and Year 2016-2017'
+            text: 'Franklin County Count of Violations By Weekday'
         },
       legend: {
             display: false
