@@ -12,4 +12,6 @@ class ApplicationController < ActionController::Base
   end
   def webscraping
   end
+  def police
+  end
 end

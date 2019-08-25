@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get 'contact', to: 'application#contact'
   get 'apple', to: 'application#apple'
   get 'webscraping', to:'application#webscraping'
+  get 'police', to:'application#police'
 end
